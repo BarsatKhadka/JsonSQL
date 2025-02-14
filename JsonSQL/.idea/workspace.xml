@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="456a6be9-5858-4813-ab9e-d6f3a26e277c" name="Changes" comment="add: parse and execute the query flow demo">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="456a6be9-5858-4813-ab9e-d6f3a26e277c" name="Changes" comment="add: &quot;SELECT&quot; query items are stored in hashset for use.">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/QueryExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/QueryExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/QueryParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/QueryParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1739486458736</updated>
       <workItem from="1739486459778" duration="9864000" />
-      <workItem from="1739549577154" duration="14184000" />
+      <workItem from="1739549577154" duration="14764000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -175,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739571270366</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add: &quot;SELECT&quot; query items are stored in hashset for use.">
+      <option name="closed" value="true" />
+      <created>1739572308650</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1739572308650</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +202,7 @@
     <MESSAGE value="update: ValidSyntax and QueryParser structure update." />
     <MESSAGE value="bug fix: regex syntax update for as" />
     <MESSAGE value="add: parse and execute the query flow demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: parse and execute the query flow demo" />
+    <MESSAGE value="add: &quot;SELECT&quot; query items are stored in hashset for use." />
+    <option name="LAST_COMMIT_MESSAGE" value="add: &quot;SELECT&quot; query items are stored in hashset for use." />
   </component>
 </project>

@@ -19,13 +19,8 @@ public class App
         System.out.println(output);
         ValidSyntax validSyntax = new ValidSyntax();
         String query = "SELECT name, age FROM users WHERE age > 25";
-
-
-        QueryParser parser = new QueryParser();
-        ParsedQueryFields fields = parser.parseQuery(query);
-
-        QueryExecutor executor = new QueryExecutor();
-        executor.executeQuery(fields);
+        QueryExecutor queryExecutor = new QueryExecutor();
+        queryExecutor.executeQuery(query);
 
     }
 }
