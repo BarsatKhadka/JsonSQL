@@ -3,6 +3,8 @@ package org.example;
 import com.fasterxml.jackson.databind.JsonNode;
 import org.example.Model.ParsedQueryFields;
 import org.example.Validator.ValidSyntax;
+import org.example.core.QueryExecutor;
+import org.example.core.QueryParser;
 import org.example.utility.JsonLoader;
 
 /**
@@ -11,14 +13,19 @@ import org.example.utility.JsonLoader;
  */
 public class App 
 {
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ) {
         JsonLoader jsonLoader = new JsonLoader();
         JsonNode output = jsonLoader.load("https://jsonplaceholder.typicode.com/posts/1");
         System.out.println(output);
+        ValidSyntax validSyntax = new ValidSyntax();
+        String query = "SELECT name, age FROM users WHERE age > 25";
 
 
+        QueryParser parser = new QueryParser();
+        ParsedQueryFields fields = parser.parseQuery(query);
 
+        QueryExecutor executor = new QueryExecutor();
+        executor.executeQuery(fields);
 
     }
 }
