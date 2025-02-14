@@ -5,6 +5,9 @@
 
     import java.io.File;
     import java.io.IOException;
+    import java.net.URI;
+    import java.net.URISyntaxException;
+    import java.net.URL;
     import java.nio.file.Files;
     import java.nio.file.Path;
     import java.nio.file.Paths;
@@ -16,13 +19,19 @@
         private static final ObjectMapper mapper = new ObjectMapper();
 
 
-        public static JsonNode load(String input){
+        public static JsonNode load(String input)  {
             if(isFilePath(input)){
                 return loadJsonFromFile(input);
             }
+            else if(isUrlPath(input)){
+                try {
+                    return loadJsonFromUrl(input);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
             else if(isStringPath(input)){
                 return loadJsonFromString(input);
-
             }
             else{
                 throw new RuntimeException("File not found");
@@ -74,6 +83,31 @@
             }
 
         }
+
+        private static boolean isUrlPath(String input){
+            if (input == null || input.trim().isEmpty()) {
+                return false;
+            }
+
+            try {
+                URI uri = new URI(input);
+                String scheme = uri.getScheme();
+                return scheme != null &&
+                        (scheme.equalsIgnoreCase("http") ||
+                                scheme.equalsIgnoreCase("https") ||
+                                scheme.equalsIgnoreCase("ftp") ||
+                                scheme.equalsIgnoreCase("file"));
+            } catch (URISyntaxException e) {
+                return false;
+            }
+
+        }
+
+        private static JsonNode loadJsonFromUrl(String url) throws IOException {
+            return mapper.readTree(new URL(url));
+
+        }
+
 
 
 
