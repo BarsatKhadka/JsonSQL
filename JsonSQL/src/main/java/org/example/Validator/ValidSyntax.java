@@ -1,5 +1,7 @@
 package org.example.Validator;
 
+import org.example.Model.ParsedQueryFields;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -13,11 +15,38 @@ public class ValidSyntax {
 
     }
 
-    public boolean isValid(String query) {
-        if(query == null || query.trim().isEmpty()){ return false; };
-        Matcher matcher = QUERY_PATTERN.matcher(query);
-        return matcher.matches();
+    ParsedQueryFields parsedQueryFields = new ParsedQueryFields();
+
+    public ParsedQueryFields parse(String query) {
+        if (query == null || query.trim().isEmpty()) {
+            throw new IllegalArgumentException("Query cannot be null or empty");
+        }
+
+        Matcher matcher = QUERY_PATTERN.matcher(query.trim());
+        if (!matcher.matches()) {
+            throw new IllegalArgumentException("Invalid query format");
+        }
+
+        ParsedQueryFields parsedQueryFields = new ParsedQueryFields();
+        parsedQueryFields.setSelect(matcher.group("select").trim());
+        parsedQueryFields.setFrom(matcher.group("from").trim());
+
+        if (matcher.group("alias") != null) {
+            parsedQueryFields.setAlias(matcher.group("alias").trim());
+        }
+
+        if (matcher.group("where") != null) {
+            parsedQueryFields.setWhere(matcher.group("where").trim());
+        }
+
+        return parsedQueryFields;
+
     }
+
+
+
+
+
 
 
 }

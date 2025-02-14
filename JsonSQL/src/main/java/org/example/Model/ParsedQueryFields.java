@@ -6,6 +6,7 @@ public class ParsedQueryFields {
     private String where;
     private String alias;
 
+    public ParsedQueryFields() {}
     public ParsedQueryFields(String select, String from, String where, String alias) {
         this.select = select;
         this.from = from;
@@ -34,5 +35,13 @@ public class ParsedQueryFields {
 
     public void setWhere(String where) {
         this.where = where;
+    }
+
+    public void setAlias(String alias) {
+        this.alias = alias;
+    }
+
+    public String getAlias() {
+        return alias;
     }
 }
