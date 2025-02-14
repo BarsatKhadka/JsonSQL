@@ -1,6 +1,8 @@
 package org.example;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import org.example.Model.ParsedQueryFields;
+import org.example.Validator.ValidSyntax;
 import org.example.utility.JsonLoader;
 
 /**
@@ -14,6 +16,7 @@ public class App
         JsonLoader jsonLoader = new JsonLoader();
         JsonNode output = jsonLoader.load("https://jsonplaceholder.typicode.com/posts/1");
         System.out.println(output);
+
 
 
 

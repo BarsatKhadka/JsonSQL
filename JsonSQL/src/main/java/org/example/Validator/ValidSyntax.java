@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 public class ValidSyntax {
     private static final Pattern QUERY_PATTERN = Pattern.compile(
-            "^\\s*SELECT\\s+(?<select>.+?)\\s+FROM\\s+(?<from>\\S+(?:\\s+AS\\s+\\S+)?)(?:\\s+WHERE\\s+(?<where>.+?))?\\s*$",
+            "^\\s*SELECT\\s+(?<select>.+?)\\s+FROM\\s+(?<from>\\S+)(?:\\s+AS\\s+(?<alias>\\S+))?(?:\\s+WHERE\\s+(?<where>.+?))?\\s*$",
             Pattern.CASE_INSENSITIVE
     );
 
@@ -34,6 +34,7 @@ public class ValidSyntax {
         if (matcher.group("alias") != null) {
             parsedQueryFields.setAlias(matcher.group("alias").trim());
         }
+
 
         if (matcher.group("where") != null) {
             parsedQueryFields.setWhere(matcher.group("where").trim());

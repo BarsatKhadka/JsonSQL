@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="456a6be9-5858-4813-ab9e-d6f3a26e277c" name="Changes" comment="add: getters and setters for ParsedQueryFields.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Model/ParsedQueryFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Model/ParsedQueryFields.java" afterDir="false" />
+    <list default="true" id="456a6be9-5858-4813-ab9e-d6f3a26e277c" name="Changes" comment="update: ValidSyntax and QueryParser structure update.">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Validator/ValidSyntax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Validator/ValidSyntax.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/QueryParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/QueryParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1739486458736</updated>
       <workItem from="1739486459778" duration="9864000" />
-      <workItem from="1739549577154" duration="12093000" />
+      <workItem from="1739549577154" duration="12402000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -152,7 +150,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739567766415</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update: ValidSyntax and QueryParser structure update.">
+      <option name="closed" value="true" />
+      <created>1739570129944</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1739570129944</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +174,7 @@
     <MESSAGE value="add: regex to see if a command is validCommand in terms of syntax" />
     <MESSAGE value="add: ParsedQueryFields.java class for fields parameter allocation." />
     <MESSAGE value="add: getters and setters for ParsedQueryFields." />
-    <option name="LAST_COMMIT_MESSAGE" value="add: getters and setters for ParsedQueryFields." />
+    <MESSAGE value="update: ValidSyntax and QueryParser structure update." />
+    <option name="LAST_COMMIT_MESSAGE" value="update: ValidSyntax and QueryParser structure update." />
   </component>
 </project>
