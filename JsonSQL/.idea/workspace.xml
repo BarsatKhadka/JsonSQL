@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="456a6be9-5858-4813-ab9e-d6f3a26e277c" name="Changes" comment="add: loadJsonFromString method in JsonLoader Class.">
+    <list default="true" id="456a6be9-5858-4813-ab9e-d6f3a26e277c" name="Changes" comment="add: loadJsonFromUrl method in JsonLoader Class.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Validator/ValidCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utility/JsonLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utility/JsonLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1739486458736</updated>
       <workItem from="1739486459778" duration="9864000" />
-      <workItem from="1739549577154" duration="728000" />
+      <workItem from="1739549577154" duration="5420000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -118,7 +119,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739508261485</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add: loadJsonFromUrl method in JsonLoader Class.">
+      <option name="closed" value="true" />
+      <created>1739550606430</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1739550606430</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +139,7 @@
     <MESSAGE value="add: Initialize JsonLoader class. A helper class to load your json data." />
     <MESSAGE value="add: loadJsonFromFile method in JsonLoader Class." />
     <MESSAGE value="add: loadJsonFromString method in JsonLoader Class." />
-    <option name="LAST_COMMIT_MESSAGE" value="add: loadJsonFromString method in JsonLoader Class." />
+    <MESSAGE value="add: loadJsonFromUrl method in JsonLoader Class." />
+    <option name="LAST_COMMIT_MESSAGE" value="add: loadJsonFromUrl method in JsonLoader Class." />
   </component>
 </project>

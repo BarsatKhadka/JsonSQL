@@ -1,5 +1,6 @@
 package org.example;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import org.example.utility.JsonLoader;
 
 /**
@@ -11,7 +12,10 @@ public class App
     public static void main( String[] args )
     {
         JsonLoader jsonLoader = new JsonLoader();
-        jsonLoader.load("https://jsonplaceholder.typicode.com/posts/1");
+        JsonNode output = jsonLoader.load("https://jsonplaceholder.typicode.com/posts/1");
+        System.out.println(output);
+
+
 
     }
 }
