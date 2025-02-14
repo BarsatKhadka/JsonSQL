@@ -20,6 +20,10 @@
             if(isFilePath(input)){
                 return loadJsonFromFile(input);
             }
+            else if(isStringPath(input)){
+                return loadJsonFromString(input);
+
+            }
             else{
                 throw new RuntimeException("File not found");
             }
@@ -42,6 +46,33 @@
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+        }
+
+        private static boolean isStringPath(String input){
+            if(input == null || input.trim().isEmpty()){
+                return false;
+            }
+            String trimmedInput = input.trim();
+            if (!trimmedInput.startsWith("{") && !trimmedInput.startsWith("[")) {
+                return false;
+            }
+            try {
+                System.out.println(mapper.readTree(trimmedInput));
+                mapper.readTree(trimmedInput);
+                return true;
+            } catch (Exception e) {
+                return false;
+            }
+
+        }
+
+        private static JsonNode loadJsonFromString(String filePath) {
+            try {
+                return mapper.readTree(filePath);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
         }
 
 
