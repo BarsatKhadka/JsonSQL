@@ -20,6 +20,7 @@ public class QueryParser {
 
         Map<String,Object> result = new HashMap<>();
         Set<Object> selectFields = new HashSet();
+        Set<Object> aliasFields = new HashSet();
 
         ParsedQueryFields parsedQueryFields =  validSyntax.parse(query);
         String select = parsedQueryFields.getSelect();
@@ -43,10 +44,20 @@ public class QueryParser {
             Object selectItem = parseField(select);
             selectFields.add(selectItem);
         }
+
+        if(alias.contains(",")){
+            String[] fields = alias.split(",");
+            for(String field : fields){
+                String trimmedField = field.trim();
+                Object aliasItem = parseField(trimmedField);
+                aliasFields.add(aliasItem);
+            }
+        }
+
         result.put("select",selectFields);
         result.put("from",from);
         result.put("where",where);
-        result.put("alias",alias);
+        result.put("alias",aliasFields);
 
         return result;
     }

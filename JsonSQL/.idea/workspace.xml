@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="456a6be9-5858-4813-ab9e-d6f3a26e277c" name="Changes" comment="add: getting all fields parsed into a map.">
+    <list default="true" id="456a6be9-5858-4813-ab9e-d6f3a26e277c" name="Changes" comment="update: updated regex where , the position of &quot;where&quot; and &quot;as&quot; doesnot matter in the command.">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +76,7 @@
       <updated>1739486458736</updated>
       <workItem from="1739486459778" duration="9864000" />
       <workItem from="1739549577154" duration="15464000" />
-      <workItem from="1739627672205" duration="1633000" />
+      <workItem from="1739627672205" duration="2030000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -198,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739628724198</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="update: updated regex where , the position of &quot;where&quot; and &quot;as&quot; doesnot matter in the command.">
+      <option name="closed" value="true" />
+      <created>1739629412787</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1739629412787</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +228,7 @@
     <MESSAGE value="add: &quot;SELECT&quot; query items are stored in hashset for use." />
     <MESSAGE value="update: previous logic migrate from QueryExecutor to QueryParser" />
     <MESSAGE value="add: getting all fields parsed into a map." />
-    <option name="LAST_COMMIT_MESSAGE" value="add: getting all fields parsed into a map." />
+    <MESSAGE value="update: updated regex where , the position of &quot;where&quot; and &quot;as&quot; doesnot matter in the command." />
+    <option name="LAST_COMMIT_MESSAGE" value="update: updated regex where , the position of &quot;where&quot; and &quot;as&quot; doesnot matter in the command." />
   </component>
 </project>
