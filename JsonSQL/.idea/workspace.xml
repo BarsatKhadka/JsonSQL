@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="456a6be9-5858-4813-ab9e-d6f3a26e277c" name="Changes" comment="update: previous logic migrate from QueryExecutor to QueryParser">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/QueryParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/QueryParser.java" afterDir="false" />
+    <list default="true" id="456a6be9-5858-4813-ab9e-d6f3a26e277c" name="Changes" comment="add: getting all fields parsed into a map.">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +76,7 @@
       <updated>1739486458736</updated>
       <workItem from="1739486459778" duration="9864000" />
       <workItem from="1739549577154" duration="15464000" />
-      <workItem from="1739627672205" duration="842000" />
+      <workItem from="1739627672205" duration="1633000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -191,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739572818386</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add: getting all fields parsed into a map.">
+      <option name="closed" value="true" />
+      <created>1739628724198</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1739628724198</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +219,7 @@
     <MESSAGE value="add: parse and execute the query flow demo" />
     <MESSAGE value="add: &quot;SELECT&quot; query items are stored in hashset for use." />
     <MESSAGE value="update: previous logic migrate from QueryExecutor to QueryParser" />
-    <option name="LAST_COMMIT_MESSAGE" value="update: previous logic migrate from QueryExecutor to QueryParser" />
+    <MESSAGE value="add: getting all fields parsed into a map." />
+    <option name="LAST_COMMIT_MESSAGE" value="add: getting all fields parsed into a map." />
   </component>
 </project>

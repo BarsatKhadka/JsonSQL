@@ -18,7 +18,7 @@ public class App
         JsonNode output = jsonLoader.load("https://jsonplaceholder.typicode.com/posts/1");
         System.out.println(output);
         ValidSyntax validSyntax = new ValidSyntax();
-        String query = "SELECT name, age FROM users WHERE age > 25";
+        String query = "SELECT name, age FROM users  WHERE age > 25 AS dkfkjdahfjds ";
         QueryExecutor queryExecutor = new QueryExecutor();
         queryExecutor.executeQuery(query);
 
