@@ -3,7 +3,9 @@ package org.example.core;
 import org.example.Model.ParsedQueryFields;
 import org.example.Validator.ValidSyntax;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class QueryParser {
@@ -14,8 +16,9 @@ public class QueryParser {
     }
 
 
-    public Set<Object> parseQuery(String query){
+    public Map<String,Object> parseQuery(String query){
 
+        Map<String,Object> result = new HashMap<>();
         Set<Object> selectFields = new HashSet();
 
         ParsedQueryFields parsedQueryFields =  validSyntax.parse(query);
@@ -40,8 +43,12 @@ public class QueryParser {
             Object selectItem = parseField(select);
             selectFields.add(selectItem);
         }
+        result.put("select",selectFields);
+        result.put("from",from);
+        result.put("where",where);
+        result.put("alias",alias);
 
-        return selectFields;
+        return result;
     }
 
     //helper class to convert to object
