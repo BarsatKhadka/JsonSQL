@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="456a6be9-5858-4813-ab9e-d6f3a26e277c" name="Changes" comment="update: previous commit duplicate fix">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="456a6be9-5858-4813-ab9e-d6f3a26e277c" name="Changes" comment="add: fix for array elements. Different method for evaluating condition (where)">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/QueryExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/QueryExecutor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +78,7 @@
       <workItem from="1739549577154" duration="15464000" />
       <workItem from="1739627672205" duration="6837000" />
       <workItem from="1739661768953" duration="8978000" />
-      <workItem from="1739726862646" duration="324000" />
+      <workItem from="1739726862646" duration="698000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -258,7 +256,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739674020722</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="add: fix for array elements. Different method for evaluating condition (where)">
+      <option name="closed" value="true" />
+      <created>1739727266087</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1739727266087</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +293,7 @@
     <MESSAGE value="add: returns in format {key: value} rather than just value" />
     <MESSAGE value="add: select specific fields from Json but currently does not support nested arrays , only objects." />
     <MESSAGE value="update: previous commit duplicate fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="update: previous commit duplicate fix" />
+    <MESSAGE value="add: fix for array elements. Different method for evaluating condition (where)" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: fix for array elements. Different method for evaluating condition (where)" />
   </component>
 </project>
