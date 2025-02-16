@@ -22,7 +22,11 @@ public class QueryExecutor {
         JsonNode whereNode = (whereFields != null) ? jsonNode.get(whereFields.toString()) : null;
 
         if (selectFields.contains("*")) {
-            return selectAll(fromNode, whereNode);
+            if ("*".equals(fromFields)) {
+                return selectAll(jsonNode, whereNode);
+            } else {
+                return selectAll(fromNode, whereNode);
+            }
 //        } else if ("*".equals(fromFields)) {
 //            selectFromAll(jsonNode, selectFields, whereFields);
 //        } else if (fromNode.isArray()) {
@@ -61,6 +65,8 @@ public class QueryExecutor {
             return mapper.createObjectNode().put("error", "Unsupported structure for SELECT *.");
         }
     }
+
+
 
 }
 
