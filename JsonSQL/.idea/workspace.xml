@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="456a6be9-5858-4813-ab9e-d6f3a26e277c" name="Changes" comment="add: SELECT * logic , now works!">
+    <list default="true" id="456a6be9-5858-4813-ab9e-d6f3a26e277c" name="Changes" comment="add: SELECT * FROM * logic , this returns all.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/QueryExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/QueryExecutor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +79,7 @@
       <workItem from="1739486459778" duration="9864000" />
       <workItem from="1739549577154" duration="15464000" />
       <workItem from="1739627672205" duration="6837000" />
-      <workItem from="1739661768953" duration="5028000" />
+      <workItem from="1739661768953" duration="6371000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -224,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739669408589</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="add: SELECT * FROM * logic , this returns all.">
+      <option name="closed" value="true" />
+      <created>1739671073301</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1739671073301</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +258,7 @@
     <MESSAGE value="update: updated regex where , the position of &quot;where&quot; and &quot;as&quot; doesnot matter in the command." />
     <MESSAGE value="add: alias supports command seperated by &quot;,&quot; (commas)" />
     <MESSAGE value="add: SELECT * logic , now works!" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: SELECT * logic , now works!" />
+    <MESSAGE value="add: SELECT * FROM * logic , this returns all." />
+    <option name="LAST_COMMIT_MESSAGE" value="add: SELECT * FROM * logic , this returns all." />
   </component>
 </project>

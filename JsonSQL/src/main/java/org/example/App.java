@@ -21,7 +21,7 @@ public class App
                 "  \"colors\": [\"red\", \"green\", \"blue\", \"yellow\"]\n" +
                 "}\n");
         ValidSyntax validSyntax = new ValidSyntax();
-        String query = "SELECT * FROM *";
+        String query = "SELECT * FROM animals";
         QueryExecutor queryExecutor = new QueryExecutor();
         System.out.println(queryExecutor.executeQuery(query, output));
 

@@ -23,25 +23,18 @@ public class QueryExecutor {
 
         if (selectFields.contains("*")) {
             if ("*".equals(fromFields)) {
-                return selectAll(jsonNode, whereNode);
+                return selectAll(jsonNode, whereNode , fromFields.toString());
             } else {
-                return selectAll(fromNode, whereNode);
+                return selectAll(fromNode, whereNode , fromFields.toString());
             }
-//        } else if ("*".equals(fromFields)) {
-//            selectFromAll(jsonNode, selectFields, whereFields);
-//        } else if (fromNode.isArray()) {
-//            selectFromArray(fromNode, selectFields, whereFields);
-//        } else if (fromNode.isObject()) {
-//            selectFromObject(fromNode, selectFields, whereFields);
         } else {
-
             throw new RuntimeException("Unsupported structure in FROM.");
         }
 
 
     }
 
-    private static JsonNode selectAll(JsonNode fromNode, JsonNode whereFields) {
+    private static JsonNode selectAll(JsonNode fromNode, JsonNode whereFields, String fromFieldName) {
         ObjectMapper mapper = new ObjectMapper();
         if (fromNode.isArray()) {
             ArrayNode resultArray = mapper.createArrayNode();
@@ -54,13 +47,17 @@ public class QueryExecutor {
                     resultArray.add(element);
                 }
             }
-            return resultArray;
+            ObjectNode resultObject = mapper.createObjectNode();
+            resultObject.set(fromFieldName, resultArray);
+            return resultObject;
         } else if (fromNode.isObject()) {
             ObjectNode resultObject = mapper.createObjectNode();
             fromNode.fieldNames().forEachRemaining(field -> {
                 resultObject.set(field, fromNode.get(field));
             });
-            return resultObject;
+            ObjectNode resultObject2 = mapper.createObjectNode();
+            resultObject.set(fromFieldName, fromNode);
+            return resultObject2;
         } else {
             return mapper.createObjectNode().put("error", "Unsupported structure for SELECT *.");
         }
