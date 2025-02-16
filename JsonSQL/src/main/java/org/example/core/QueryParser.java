@@ -3,10 +3,7 @@ package org.example.core;
 import org.example.Model.ParsedQueryFields;
 import org.example.Validator.ValidSyntax;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class QueryParser {
     private final ValidSyntax validSyntax;
@@ -16,7 +13,7 @@ public class QueryParser {
     }
 
 
-    public Map<String,Object> parseQuery(String query){
+    public Map<String, Object> parseQuery(String query){
 
         Map<String,Object> result = new HashMap<>();
         Set<Object> selectFields = new HashSet();
@@ -45,12 +42,14 @@ public class QueryParser {
             selectFields.add(selectItem);
         }
 
-        if(alias.contains(",")){
-            String[] fields = alias.split(",");
-            for(String field : fields){
-                String trimmedField = field.trim();
-                Object aliasItem = parseField(trimmedField);
-                aliasFields.add(aliasItem);
+        if (alias != null && !alias.isEmpty()) {
+            if (alias.contains(",")) {
+                String[] fields = alias.split(",");
+                for (String field : fields) {
+                    String trimmedField = field.trim();
+                    Object aliasItem = parseField(trimmedField);
+                    aliasFields.add(aliasItem);
+                }
             }
         }
 

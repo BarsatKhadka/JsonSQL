@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="456a6be9-5858-4813-ab9e-d6f3a26e277c" name="Changes" comment="update: updated regex where , the position of &quot;where&quot; and &quot;as&quot; doesnot matter in the command.">
+    <list default="true" id="456a6be9-5858-4813-ab9e-d6f3a26e277c" name="Changes" comment="add: alias supports command seperated by &quot;,&quot; (commas)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/QueryExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/QueryExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/QueryParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/QueryParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utility/JsonLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utility/JsonLoader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +80,8 @@
       <updated>1739486458736</updated>
       <workItem from="1739486459778" duration="9864000" />
       <workItem from="1739549577154" duration="15464000" />
-      <workItem from="1739627672205" duration="2030000" />
+      <workItem from="1739627672205" duration="6837000" />
+      <workItem from="1739661768953" duration="3643000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -206,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739629412787</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="add: alias supports command seperated by &quot;,&quot; (commas)">
+      <option name="closed" value="true" />
+      <created>1739629864408</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1739629864408</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +242,7 @@
     <MESSAGE value="update: previous logic migrate from QueryExecutor to QueryParser" />
     <MESSAGE value="add: getting all fields parsed into a map." />
     <MESSAGE value="update: updated regex where , the position of &quot;where&quot; and &quot;as&quot; doesnot matter in the command." />
-    <option name="LAST_COMMIT_MESSAGE" value="update: updated regex where , the position of &quot;where&quot; and &quot;as&quot; doesnot matter in the command." />
+    <MESSAGE value="add: alias supports command seperated by &quot;,&quot; (commas)" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: alias supports command seperated by &quot;,&quot; (commas)" />
   </component>
 </project>

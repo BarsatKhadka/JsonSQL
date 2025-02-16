@@ -16,7 +16,7 @@
     //Types of datasources for json:
     //1) Files with .json  2) String  3) Url
     public class JsonLoader {
-        private static final ObjectMapper mapper = new ObjectMapper();
+        public static final ObjectMapper mapper = new ObjectMapper();
 
 
         public static JsonNode load(String input)  {
@@ -66,7 +66,6 @@
                 return false;
             }
             try {
-                System.out.println(mapper.readTree(trimmedInput));
                 mapper.readTree(trimmedInput);
                 return true;
             } catch (Exception e) {
