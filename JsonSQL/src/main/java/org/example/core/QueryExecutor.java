@@ -7,10 +7,9 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import java.util.*;
 
-
 public class QueryExecutor {
 
-    public JsonNode executeQuery(String query , JsonNode jsonNode) {
+    public JsonNode executeQuery(String query, JsonNode jsonNode) {
         QueryParser queryParser = new QueryParser();
         Map<String, Object> allFields = queryParser.parseQuery(query);
         Set<Object> selectFields = (Set<Object>) (allFields.get("select"));
@@ -23,15 +22,13 @@ public class QueryExecutor {
 
         if (selectFields.contains("*")) {
             if ("*".equals(fromFields)) {
-                return selectAll(jsonNode, whereNode , fromFields.toString());
+                return selectAll(jsonNode, whereNode, fromFields.toString());
             } else {
-                return selectAll(fromNode, whereNode , fromFields.toString());
+                return selectAll(fromNode, whereNode, fromFields.toString());
             }
         } else {
             return selectSpecificFields(fromNode, selectFields, whereNode, fromFields.toString());
         }
-
-
     }
 
     private static JsonNode selectAll(JsonNode fromNode, JsonNode whereFields, String fromFieldName) {
@@ -39,11 +36,7 @@ public class QueryExecutor {
         if (fromNode.isArray()) {
             ArrayNode resultArray = mapper.createArrayNode();
             for (JsonNode element : fromNode) {
-                if (whereFields != null) {
-                    if (element.get(whereFields.toString()) != null) {
-                        resultArray.add(element);
-                    }
-                } else {
+                if (whereFields == null || evaluateCondition(element, whereFields)) {
                     resultArray.add(element);
                 }
             }
@@ -52,23 +45,25 @@ public class QueryExecutor {
             return resultObject;
         } else if (fromNode.isObject()) {
             ObjectNode resultObject = mapper.createObjectNode();
-            fromNode.fieldNames().forEachRemaining(field -> {
-                resultObject.set(field, fromNode.get(field));
-            });
-            ObjectNode resultObject2 = mapper.createObjectNode();
             resultObject.set(fromFieldName, fromNode);
-            return resultObject2;
+            return resultObject;
         } else {
             return mapper.createObjectNode().put("error", "Unsupported structure for SELECT *.");
         }
     }
+
     private static JsonNode selectSpecificFields(JsonNode fromNode, Set<Object> selectFields, JsonNode whereFields, String fromFieldName) {
         ObjectMapper mapper = new ObjectMapper();
         if (fromNode.isArray()) {
             ArrayNode resultArray = mapper.createArrayNode();
             for (JsonNode element : fromNode) {
-                if (whereFields != null) {
-                    if (element.get(whereFields.toString()) != null) {
+                if (element.isValueNode()) {
+                    if (selectFields.contains(element.asText())) {
+                        resultArray.add(element);
+                    }
+                }
+                else if (element.isObject()) {
+                    if (whereFields == null || evaluateCondition(element, whereFields)) {
                         ObjectNode filteredObject = mapper.createObjectNode();
                         selectFields.forEach(field -> {
                             if (element.has(field.toString())) {
@@ -97,7 +92,17 @@ public class QueryExecutor {
         }
     }
 
-
-
+    private static boolean evaluateCondition(JsonNode element, JsonNode whereFields) {
+        if (whereFields.isObject()) {
+            Iterator<Map.Entry<String, JsonNode>> fields = whereFields.fields();
+            while (fields.hasNext()) {
+                Map.Entry<String, JsonNode> field = fields.next();
+                if (!element.has(field.getKey()) || !element.get(field.getKey()).equals(field.getValue())) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        return false;
+    }
 }
-
