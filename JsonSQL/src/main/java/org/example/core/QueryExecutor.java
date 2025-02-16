@@ -28,7 +28,7 @@ public class QueryExecutor {
                 return selectAll(fromNode, whereNode , fromFields.toString());
             }
         } else {
-            throw new RuntimeException("Unsupported structure in FROM.");
+            return selectSpecificFields(fromNode, selectFields, whereNode, fromFields.toString());
         }
 
 
@@ -60,6 +60,48 @@ public class QueryExecutor {
             return resultObject2;
         } else {
             return mapper.createObjectNode().put("error", "Unsupported structure for SELECT *.");
+        }
+    }
+    private static JsonNode selectSpecificFields(JsonNode fromNode, Set<Object> selectFields, JsonNode whereFields, String fromFieldName) {
+        ObjectMapper mapper = new ObjectMapper();
+        if (fromNode.isArray()) {
+            ArrayNode resultArray = mapper.createArrayNode();
+            for (JsonNode element : fromNode) {
+                if (whereFields != null) {
+                    if (element.get(whereFields.toString()) != null) {
+                        ObjectNode filteredObject = mapper.createObjectNode();
+                        selectFields.forEach(field -> {
+                            if (element.has(field.toString())) {
+                                filteredObject.set(field.toString(), element.get(field.toString()));
+                            }
+                        });
+                        resultArray.add(filteredObject);
+                    }
+                } else {
+                    ObjectNode filteredObject = mapper.createObjectNode();
+                    selectFields.forEach(field -> {
+                        if (element.has(field.toString())) {
+                            filteredObject.set(field.toString(), element.get(field.toString()));
+                        }
+                    });
+                    resultArray.add(filteredObject);
+                }
+            }
+            ObjectNode resultObject = mapper.createObjectNode();
+            resultObject.set(fromFieldName, resultArray);
+            return resultObject;
+        } else if (fromNode.isObject()) {
+            ObjectNode filteredObject = mapper.createObjectNode();
+            selectFields.forEach(field -> {
+                if (fromNode.has(field.toString())) {
+                    filteredObject.set(field.toString(), fromNode.get(field.toString()));
+                }
+            });
+            ObjectNode resultObject = mapper.createObjectNode();
+            resultObject.set(fromFieldName, filteredObject);
+            return resultObject;
+        } else {
+            return mapper.createObjectNode().put("error", "Unsupported structure for SELECT.");
         }
     }
 

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="456a6be9-5858-4813-ab9e-d6f3a26e277c" name="Changes" comment="add: SELECT * FROM * logic , this returns all.">
+    <list default="true" id="456a6be9-5858-4813-ab9e-d6f3a26e277c" name="Changes" comment="add: returns in format {key: value} rather than just value">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/QueryExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/QueryExecutor.java" afterDir="false" />
@@ -79,7 +79,7 @@
       <workItem from="1739486459778" duration="9864000" />
       <workItem from="1739549577154" duration="15464000" />
       <workItem from="1739627672205" duration="6837000" />
-      <workItem from="1739661768953" duration="6371000" />
+      <workItem from="1739661768953" duration="7052000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -233,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739671073301</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="add: returns in format {key: value} rather than just value">
+      <option name="closed" value="true" />
+      <created>1739672253231</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1739672253231</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +267,7 @@
     <MESSAGE value="add: alias supports command seperated by &quot;,&quot; (commas)" />
     <MESSAGE value="add: SELECT * logic , now works!" />
     <MESSAGE value="add: SELECT * FROM * logic , this returns all." />
-    <option name="LAST_COMMIT_MESSAGE" value="add: SELECT * FROM * logic , this returns all." />
+    <MESSAGE value="add: returns in format {key: value} rather than just value" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: returns in format {key: value} rather than just value" />
   </component>
 </project>
