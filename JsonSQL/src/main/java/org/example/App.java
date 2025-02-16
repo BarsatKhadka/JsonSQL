@@ -12,64 +12,16 @@ import org.example.utility.JsonLoader;
 public class App
 {
     public static void main( String[] args ) {
-        String jsonArrayString = "{"
-                + "\"employees\": ["
-                + "  {"
-                + "    \"id\": 1,"
-                + "    \"name\": \"John Doe\","
-                + "    \"age\": 30,"
-                + "    \"address\": {"
-                + "      \"street\": \"123 Main St\","
-                + "      \"city\": \"New York\","
-                + "      \"state\": \"NY\","
-                + "      \"postalCode\": \"10001\""
-                + "    },"
-                + "    \"skills\": [\"Java\", \"Python\", \"SQL\"],"
-                + "    \"projects\": ["
-                + "      {"
-                + "        \"name\": \"Project A\","
-                + "        \"status\": \"Completed\","
-                + "        \"teamSize\": 5"
-                + "      },"
-                + "      {"
-                + "        \"name\": \"Project B\","
-                + "        \"status\": \"In Progress\","
-                + "        \"teamSize\": 8"
-                + "      }"
-                + "    ]"
-                + "  },"
-                + "  {"
-                + "    \"id\": 2,"
-                + "    \"name\": \"Jane Smith\","
-                + "    \"age\": 25,"
-                + "    \"address\": {"
-                + "      \"street\": \"456 Elm St\","
-                + "      \"city\": \"Los Angeles\","
-                + "      \"state\": \"CA\","
-                + "      \"postalCode\": \"90001\""
-                + "    },"
-                + "    \"skills\": [\"JavaScript\", \"React\", \"Node.js\"],"
-                + "    \"projects\": ["
-                + "      {"
-                + "        \"name\": \"Project X\","
-                + "        \"status\": \"In Progress\","
-                + "        \"teamSize\": 6"
-                + "      }"
-                + "    ]"
-                + "  }"
-                + "],"
-                + "\"department\": {"
-                + "  \"name\": \"Engineering\","
-                + "  \"manager\": \"Alice Johnson\","
-                + "  \"location\": \"San Francisco\""
-                + "}"
-                + "}";
-        ;
-
         JsonLoader jsonLoader = new JsonLoader();
-        JsonNode output = jsonLoader.load(jsonArrayString);
+        JsonNode output = jsonLoader.load("{\n" +
+                "  \"fruits\": [\"apple\", \"banana\", \"orange\", \"grape\"],\n" +
+                "  \"vegetables\": [\"carrot\", \"broccoli\", \"spinach\", \"tomato\"],\n" +
+                "  \"animals\": [\"dog\", \"cat\", \"elephant\", \"lion\"],\n" +
+                "  \"numbers\": [1, 2, 3, 4, 5],\n" +
+                "  \"colors\": [\"red\", \"green\", \"blue\", \"yellow\"]\n" +
+                "}\n");
         ValidSyntax validSyntax = new ValidSyntax();
-        String query = "SELECT id FROM employees";
+        String query = "SELECT * FROM fruits";
         QueryExecutor queryExecutor = new QueryExecutor();
         System.out.println(queryExecutor.executeQuery(query, output));
 

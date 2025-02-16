@@ -77,14 +77,6 @@ public class QueryExecutor {
                         });
                         resultArray.add(filteredObject);
                     }
-                } else {
-                    ObjectNode filteredObject = mapper.createObjectNode();
-                    selectFields.forEach(field -> {
-                        if (element.has(field.toString())) {
-                            filteredObject.set(field.toString(), element.get(field.toString()));
-                        }
-                    });
-                    resultArray.add(filteredObject);
                 }
             }
             ObjectNode resultObject = mapper.createObjectNode();
