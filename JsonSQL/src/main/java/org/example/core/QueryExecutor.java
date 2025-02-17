@@ -41,6 +41,7 @@ public class QueryExecutor {
                 }
             }
             ObjectNode resultObject = mapper.createObjectNode();
+
             resultObject.set(fromFieldName, resultArray);
             return resultObject;
         } else if (fromNode.isObject()) {
