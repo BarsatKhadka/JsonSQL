@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="456a6be9-5858-4813-ab9e-d6f3a26e277c" name="Changes" comment="add: Test Cases for SELECT and FROM">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/core/JsonBySQL.java" afterDir="false" />
+    <list default="true" id="456a6be9-5858-4813-ab9e-d6f3a26e277c" name="Changes" comment="add: Json By SQL class for first packaging, Ready for first realease packaging">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/QueryExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/QueryExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/barsatKhadka/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Model/ParsedQueryFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/barsatKhadka/Model/ParsedQueryFields.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Validator/ValidSyntax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/barsatKhadka/Validator/ValidSyntax.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/JsonBySQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/barsatKhadka/core/JsonBySQL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/QueryExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/barsatKhadka/core/QueryExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/QueryParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/barsatKhadka/core/QueryParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utility/JsonLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/barsatKhadka/utility/JsonLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/barsatKhadka/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,23 +51,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.App.executor": "Run",
-    "JUnit.AppTest.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AppTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.JsonSQL [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.JsonSQL [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -82,7 +90,9 @@
       <workItem from="1739549577154" duration="15464000" />
       <workItem from="1739627672205" duration="6837000" />
       <workItem from="1739661768953" duration="8978000" />
-      <workItem from="1739726862646" duration="4914000" />
+      <workItem from="1739726862646" duration="5402000" />
+      <workItem from="1739828866149" duration="1101000" />
+      <workItem from="1739831558153" duration="3555000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -276,7 +286,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739727799557</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="add: Json By SQL class for first packaging, Ready for first realease packaging">
+      <option name="closed" value="true" />
+      <created>1739760015358</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1739760015358</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,6 +325,7 @@
     <MESSAGE value="update: previous commit duplicate fix" />
     <MESSAGE value="add: fix for array elements. Different method for evaluating condition (where)" />
     <MESSAGE value="add: Test Cases for SELECT and FROM" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: Test Cases for SELECT and FROM" />
+    <MESSAGE value="add: Json By SQL class for first packaging, Ready for first realease packaging" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: Json By SQL class for first packaging, Ready for first realease packaging" />
   </component>
 </project>

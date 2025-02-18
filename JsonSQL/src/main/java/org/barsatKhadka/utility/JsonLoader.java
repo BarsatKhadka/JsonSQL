@@ -1,4 +1,4 @@
-    package org.example.utility;
+    package org.barsatKhadka.utility;
 
     import com.fasterxml.jackson.databind.JsonNode;
     import com.fasterxml.jackson.databind.ObjectMapper;

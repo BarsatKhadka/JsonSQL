@@ -1,6 +1,6 @@
-package org.example.Validator;
+package org.barsatKhadka.Validator;
 
-import org.example.Model.ParsedQueryFields;
+import org.barsatKhadka.Model.ParsedQueryFields;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

@@ -1,7 +1,7 @@
-package org.example.core;
+package org.barsatKhadka.core;
 
-import org.example.Model.ParsedQueryFields;
-import org.example.Validator.ValidSyntax;
+import org.barsatKhadka.Model.ParsedQueryFields;
+import org.barsatKhadka.Validator.ValidSyntax;
 
 import java.util.*;
 

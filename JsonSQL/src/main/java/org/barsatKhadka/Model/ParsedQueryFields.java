@@ -1,4 +1,4 @@
-package org.example.Model;
+package org.barsatKhadka.Model;
 
 public class ParsedQueryFields {
     private String select;

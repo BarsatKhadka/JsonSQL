@@ -1,10 +1,7 @@
-package org.example;
+package org.barsatKhadka;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import org.example.Validator.ValidSyntax;
-import org.example.core.JsonBySQL;
-import org.example.core.QueryExecutor;
-import org.example.utility.JsonLoader;
+import org.barsatKhadka.core.JsonBySQL;
 
 /**
  * Hello world!

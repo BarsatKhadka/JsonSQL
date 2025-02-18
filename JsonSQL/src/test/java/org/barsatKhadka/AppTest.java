@@ -1,11 +1,12 @@
-package org.example;
+package org.barsatKhadka;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
-import org.example.core.QueryExecutor;
+import org.barsatKhadka.core.QueryExecutor;
+
 
 public class AppTest extends TestCase {
 

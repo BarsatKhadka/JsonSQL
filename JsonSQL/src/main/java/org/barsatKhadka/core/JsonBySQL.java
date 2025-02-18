@@ -1,7 +1,7 @@
-package org.example.core;
+package org.barsatKhadka.core;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import org.example.utility.JsonLoader;
+import org.barsatKhadka.utility.JsonLoader;
 
 public class JsonBySQL {
     public static JsonNode jsonBySQL(String filePathOrUrlOrJsonString, String sqlCommand) {
